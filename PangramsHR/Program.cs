@@ -15,15 +15,18 @@ namespace PangramsHR
         }
         public static string PangramsHR(string s)
         {
+            s = s.ToLower();
+            List<char> charS = s.ToCharArray().ToList();
+            charS.RemoveAll(x => !char.IsLetter(x));
             var map = new Dictionary<char, int>();
-            foreach (char letter in s)
+            foreach(char letter in charS)
             {
-                if (!map.ContainsKey(letter))
+                if(!map.ContainsKey(letter))
                     map.Add(letter, 1);
                 else
                     map[letter]++;
             }
-            if (map.Count == 26)
+            if(map.Count == 26)
                 return "pangram";
             return "not pangram";
         }
