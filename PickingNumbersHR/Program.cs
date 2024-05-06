@@ -21,14 +21,6 @@ namespace PickingNumbersHR
             int left = 0, right = 1;
             while (right < a.Count)
             {
-                if (Math.Abs(a[left] - a[right]) > 1)
-                {
-                    left++;
-                    right++;
-                    continue;
-                }
-                if (right >= a.Count)
-                    break;
                 while (right < a.Count() && Math.Abs(a[left] - a[right]) <= 1)
                     right++;
                 max = Math.Max(max, right - left);
