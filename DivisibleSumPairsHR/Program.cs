@@ -17,13 +17,9 @@ namespace DivisibleSumPairsHR
         {
             int result = 0;
             for (int i = 0; i < ar.Count; i++)
-            {
                 for (int j = i + 1; j < ar.Count; j++)
-                {
                     if ((ar[i] + ar[j]) % k == 0)
                         result++;
-                }
-            }
             return result;
         }
     }
