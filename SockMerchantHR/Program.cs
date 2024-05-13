@@ -25,11 +25,7 @@ namespace SockMerchantHR
             }
             int resCount = 0;
             foreach (var kvp in map)
-            {
-                if (kvp.Value == 1)
-                    continue;
                 resCount += kvp.Value / 2;
-            }
             return resCount;
         }
     }
