@@ -23,7 +23,11 @@ namespace MigratoryBirdsHR
                 else
                     map[num]++;
             }
-            return map.OrderByDescending(x => x.Value).ThenBy(x => x.Key).First().Key;
+            return map
+                .OrderByDescending(x => x.Value)
+                .ThenBy(x => x.Key)
+                .First()
+                .Key;
         }
     }
 }
